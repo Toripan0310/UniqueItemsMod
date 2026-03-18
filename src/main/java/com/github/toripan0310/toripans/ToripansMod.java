@@ -1,4 +1,4 @@
-package com.github.toripan0310.uniqueitems;
+package com.github.toripan0310.toripans;
 
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
@@ -8,22 +8,21 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(UniqueItemsMod.MOD_ID)
-public class UniqueItemsMod
+@Mod(ToripansMod.MOD_ID)
+public class ToripansMod
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "uniqueitems";
+    public static final String MOD_ID = "toripans";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public UniqueItemsMod(FMLJavaModLoadingContext context)
+    public ToripansMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
