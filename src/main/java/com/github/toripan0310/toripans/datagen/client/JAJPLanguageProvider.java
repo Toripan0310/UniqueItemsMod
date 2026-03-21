@@ -15,6 +15,7 @@ public class JAJPLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addItem(ToripansItems.TORIPAN_EGG, "卵のtoripan");
+        addItem(ToripansItems.TORIPAN_JWEL, "宝石のtoripan");
         addItem(ToripansItems.TORIPAN_MEAT, "toripan");
         addItem(ToripansItems.COOKED_TORIPAN_MEAT, "焼きたてのtoripan");
 

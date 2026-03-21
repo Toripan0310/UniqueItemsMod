@@ -15,6 +15,7 @@ public class ENUSLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         addItem(ToripansItems.TORIPAN_EGG, "Toripan Egg");
+        addItem(ToripansItems.TORIPAN_JWEL, "Toripan Jwel");
         addItem(ToripansItems.TORIPAN_MEAT, "Toripan Meat");
         addItem(ToripansItems.COOKED_TORIPAN_MEAT, "Cooked Toripan Meat");
 

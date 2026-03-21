@@ -14,6 +14,7 @@ public class ToripansItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         basicItem(ToripansItems.TORIPAN_EGG.get());
+        basicItem(ToripansItems.TORIPAN_JWEL.get());
         basicItem(ToripansItems.TORIPAN_MEAT.get());
         basicItem(ToripansItems.COOKED_TORIPAN_MEAT.get());
 

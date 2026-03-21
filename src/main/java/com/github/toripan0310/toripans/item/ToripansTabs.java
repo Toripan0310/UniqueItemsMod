@@ -18,6 +18,7 @@ public class ToripansTabs {
                     .icon(ToripansItems.TORIPAN_EGG.get()::getDefaultInstance)
                     .displayItems(((pParameters, pOutput) -> {
                         pOutput.accept(ToripansItems.TORIPAN_EGG.get());
+                        pOutput.accept(ToripansItems.TORIPAN_JWEL.get());
                         pOutput.accept(ToripansItems.TORIPAN_MEAT.get());
                         pOutput.accept(ToripansItems.COOKED_TORIPAN_MEAT.get());
                     }))
