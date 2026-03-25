@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "toripans:toripan_jwel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_toripan_jwel_block": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "toripans:toripan_jwel_block"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_toripan_jwel_block",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "toripans:toripan_jwel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

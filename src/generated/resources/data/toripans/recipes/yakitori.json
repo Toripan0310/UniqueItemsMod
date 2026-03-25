@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "toripans:cooked_toripan_meat"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " M ",
+    " M ",
+    "SM "
+  ],
+  "result": {
+    "item": "toripans:yakitori"
+  },
+  "show_notification": true
+}
