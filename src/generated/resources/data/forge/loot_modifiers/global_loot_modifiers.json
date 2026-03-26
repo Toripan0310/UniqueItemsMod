@@ -1,0 +1,22 @@
+{
+  "entries": [
+    "toripans:toripans_jwel_from_jungle_temple",
+    "toripans:toripans_jwel_from_igloo_chest",
+    "toripans:toripans_jwel_from_end_city_treasure",
+    "toripans:toripans_jwel_from_bastion_other",
+    "toripans:toripans_jwel_from_shipwreck_treasure",
+    "toripans:toripans_jwel_from_abandoned_mineshaft",
+    "toripans:toripans_jwel_from_ruined_portal",
+    "toripans:toripans_jwel_from_bastion_bridge",
+    "toripans:toripans_jwel_from_ancient_city_ice_box",
+    "toripans:toripans_jwel_from_desert_pyramid",
+    "toripans:toripans_jwel_from_bastion_hoglin_stable",
+    "toripans:toripans_jwel_from_spawn_bonus_chest",
+    "toripans:toripans_jwel_from_nether_bridge",
+    "toripans:toripans_jwel_from_bastion_treasure",
+    "toripans:toripans_jwel_from_buried_terasure",
+    "toripans:toripans_jwel_from_pillager_outpost",
+    "toripans:toripans_jwel_from_ancient_city"
+  ],
+  "replace": false
+}

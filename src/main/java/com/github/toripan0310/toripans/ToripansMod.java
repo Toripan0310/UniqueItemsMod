@@ -3,6 +3,7 @@ package com.github.toripan0310.toripans;
 import com.github.toripan0310.toripans.block.ToripansBlocks;
 import com.github.toripan0310.toripans.item.ToripansItems;
 import com.github.toripan0310.toripans.item.ToripansTabs;
+import com.github.toripan0310.toripans.loot.ToripansLootModifiers;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -37,6 +38,8 @@ public class ToripansMod
         ToripansTabs.register(modEventBus);
 
         ToripansBlocks.register(modEventBus);
+
+        ToripansLootModifiers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
