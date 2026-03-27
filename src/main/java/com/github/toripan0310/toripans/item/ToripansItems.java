@@ -4,6 +4,7 @@ import com.github.toripan0310.toripans.ToripansMod;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.EggItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +14,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class ToripansItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ToripansMod.MOD_ID);
 
-    public static final RegistryObject<Item> TORIPAN_EGG = ITEMS.register("toripan_egg", () -> new Item(new Item.Properties()
+    public static final RegistryObject<Item> TORIPAN_EGG = ITEMS.register("toripan_egg", () -> new EggItem(new Item.Properties()
             .stacksTo(16)
             .fireResistant()));
 
