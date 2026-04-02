@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "toripans:block/toripan_slab"
+    },
+    "type=double": {
+      "model": "toripans:block/toripan_planks"
+    },
+    "type=top": {
+      "model": "toripans:block/toripan_slab_top"
+    }
+  }
+}

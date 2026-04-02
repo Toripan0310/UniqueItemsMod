@@ -28,6 +28,15 @@ public class JAJPLanguageProvider extends LanguageProvider {
         addItem(ToripansItems.TORIPAN_MEAT, "toripan");
         addItem(ToripansItems.COOKED_TORIPAN_MEAT, "焼きたてのtoripan");
         addItem(ToripansItems.YAKITORI, "焼き鳥");
+        addBlock(ToripansBlocks.TORIPAN_PLANKS, "toriの板材");
+        addBlock(ToripansBlocks.TORIPAN_PRESSURE_PLATE, "toriの感圧版");
+        addBlock(ToripansBlocks.TORIPAN_FENCE_GATE, "toriのフェンスゲート");
+        addBlock(ToripansBlocks.TORIPAN_FENCE, "toriのフェンス");
+        addBlock(ToripansBlocks.TORIPAN_TRAPDOOR, "toriのトラップドア");
+        addBlock(ToripansBlocks.TORIPAN_DOOR, "toriのドア");
+        addBlock(ToripansBlocks.TORIPAN_BUTTON, "toriのボタン");
+        addBlock(ToripansBlocks.TORIPAN_SLAB, "toriのハーフブロック");
+        addBlock(ToripansBlocks.TORIPAN_STAIRS, "toriの階段");
 
         add("creativetabs.toripan_tab", "Toripan");
 

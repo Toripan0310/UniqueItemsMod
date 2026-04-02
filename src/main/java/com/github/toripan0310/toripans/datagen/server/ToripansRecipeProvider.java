@@ -2,6 +2,7 @@ package com.github.toripan0310.toripans.datagen.server;
 
 import com.github.toripan0310.toripans.block.ToripansBlocks;
 import com.github.toripan0310.toripans.item.ToripansItems;
+import com.github.toripan0310.toripans.tag.ToripansTags;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.Items;
@@ -48,6 +49,34 @@ public class ToripansRecipeProvider extends RecipeProvider {
         woodFromLogs(pWriter, ToripansBlocks.STRIPPED_TORIPAN_WOOD.get(),
                 ToripansBlocks.STRIPPED_TORIPAN_LOG.get());
 
+        planksFromLog(pWriter,
+                ToripansBlocks.TORIPAN_PLANKS.get(),
+                ToripansTags.Items.TORIPAN_LOG, 4);
+        slab(pWriter, RecipeCategory.BUILDING_BLOCKS,
+                ToripansBlocks.TORIPAN_SLAB.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        stairs(pWriter,
+                ToripansBlocks.TORIPAN_STAIRS.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        fence(pWriter,
+                ToripansBlocks.TORIPAN_FENCE.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        fenceGate(pWriter,
+                ToripansBlocks.TORIPAN_FENCE_GATE.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        door(pWriter,
+                ToripansBlocks.TORIPAN_DOOR.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        trapdoor(pWriter,
+                ToripansBlocks.TORIPAN_TRAPDOOR.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        button(pWriter,
+                ToripansBlocks.TORIPAN_BUTTON.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+        pressurePlate(pWriter,
+                ToripansBlocks.TORIPAN_PRESSURE_PLATE.get(),
+                ToripansBlocks.TORIPAN_PLANKS.get());
+
 
     }
 
@@ -61,5 +90,37 @@ public class ToripansRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(pPackedCategory, pPacked).define('#', pUnpacked)
                 .pattern("###").pattern("###").pattern("###")
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked)).save(pFinishedRecipeConsumer);
+    }
+    private static void stairs(Consumer<FinishedRecipe> pWriter, ItemLike pResult, ItemLike pIngredient) {
+        stairBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
+    }
+    private static void fence(Consumer<FinishedRecipe> pWriter, ItemLike pResult, ItemLike pIngredient) {
+        fenceBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
+    }
+    private static void fenceGate(Consumer<FinishedRecipe> pWriter, ItemLike pResult,
+                                  ItemLike pIngredient) {
+        fenceGateBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
+    }
+    private static void door(Consumer<FinishedRecipe> pWriter, ItemLike pResult, ItemLike pIngredient) {
+        doorBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
+    }
+    private static void trapdoor(Consumer<FinishedRecipe> pWriter, ItemLike pResult,
+                                 ItemLike pIngredient) {
+        trapdoorBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
+    }
+    private static void button(Consumer<FinishedRecipe> pWriter, ItemLike pResult, ItemLike pIngredient) {
+        buttonBuilder(pResult, Ingredient.of(pIngredient))
+                .unlockedBy(getHasName(pIngredient), has(pIngredient))
+                .save(pWriter);
     }
 }

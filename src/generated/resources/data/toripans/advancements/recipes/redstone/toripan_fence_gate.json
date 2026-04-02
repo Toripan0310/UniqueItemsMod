@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "toripans:toripan_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_toripan_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "toripans:toripan_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_toripan_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "toripans:toripan_fence_gate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

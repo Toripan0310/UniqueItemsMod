@@ -1,10 +1,16 @@
 package com.github.toripan0310.toripans.datagen.client;
 
 import com.github.toripan0310.toripans.ToripansMod;
+import com.github.toripan0310.toripans.block.ToripansBlocks;
 import com.github.toripan0310.toripans.item.ToripansItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 public class ToripansItemModelProvider extends ItemModelProvider {
     public ToripansItemModelProvider(PackOutput output,  ExistingFileHelper existingFileHelper) {
@@ -19,5 +25,39 @@ public class ToripansItemModelProvider extends ItemModelProvider {
         basicItem(ToripansItems.COOKED_TORIPAN_MEAT.get());
         basicItem(ToripansItems.YAKITORI.get());
 
+        itemWithBlock(ToripansBlocks.TORIPAN_SLAB);
+        itemWithBlock(ToripansBlocks.TORIPAN_STAIRS);
+        itemWithBlock(ToripansBlocks.TORIPAN_FENCE_GATE);
+        itemWithBlock(ToripansBlocks.TORIPAN_PRESSURE_PLATE);
+
+        basicItem(ToripansBlocks.TORIPAN_DOOR.get().asItem());
+        trapdoor(ToripansBlocks.TORIPAN_TRAPDOOR);
+        fence(ToripansBlocks.TORIPAN_FENCE, ToripansBlocks.TORIPAN_PLANKS);
+        button(ToripansBlocks.TORIPAN_BUTTON, ToripansBlocks.TORIPAN_PLANKS);
+
+    }
+    public void itemWithBlock(RegistryObject<Block> block) {
+        this.getBuilder(ForgeRegistries.BLOCKS.getKey(block.get()).getPath())
+                .parent(new ModelFile.UncheckedModelFile(
+                        ToripansMod.MOD_ID + ":block/" +
+                                ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
+    }
+    public void trapdoor(RegistryObject<Block> block) {
+        this.getBuilder(ForgeRegistries.BLOCKS.getKey(block.get()).getPath())
+                .parent(new ModelFile.UncheckedModelFile(
+                        ToripansMod.MOD_ID + ":block/" +
+                                ForgeRegistries.BLOCKS.getKey(block.get()).getPath() + "_bottom"));
+    }
+    @SuppressWarnings({ "unchecked", "removal" })
+    public void fence(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(ToripansMod.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+    @SuppressWarnings({ "unchecked", "removal" })
+    public void button(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(ToripansMod.MOD_ID,
+                        "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 }

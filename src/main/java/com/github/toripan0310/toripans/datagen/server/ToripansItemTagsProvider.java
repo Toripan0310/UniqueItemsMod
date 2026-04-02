@@ -25,6 +25,7 @@ public class ToripansItemTagsProvider extends ItemTagsProvider {
         this.copy(BlockTags.LOGS, ItemTags.LOGS);
         this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);
         this.copy(BlockTags.LEAVES, ItemTags.LEAVES);
+        this.copy(BlockTags.PLANKS, ItemTags.PLANKS);
 
     }
 }

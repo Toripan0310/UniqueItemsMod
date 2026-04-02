@@ -28,6 +28,15 @@ public class ENUSLanguageProvider extends LanguageProvider {
         addItem(ToripansItems.TORIPAN_MEAT, "Toripan Meat");
         addItem(ToripansItems.COOKED_TORIPAN_MEAT, "Cooked Toripan Meat");
         addItem(ToripansItems.YAKITORI, "Yakitori");
+        addBlock(ToripansBlocks.TORIPAN_PLANKS, "Toripan Planks");
+        addBlock(ToripansBlocks.TORIPAN_PRESSURE_PLATE, "Toripan Pressure plate");
+        addBlock(ToripansBlocks.TORIPAN_FENCE_GATE, "Toripan FenceGate");
+        addBlock(ToripansBlocks.TORIPAN_FENCE, "Toripan Fence");
+        addBlock(ToripansBlocks.TORIPAN_TRAPDOOR, "Toripan Trapdoor");
+        addBlock(ToripansBlocks.TORIPAN_DOOR, "Toripan Door");
+        addBlock(ToripansBlocks.TORIPAN_BUTTON, "Toripan Button");
+        addBlock(ToripansBlocks.TORIPAN_SLAB, "Toripan Slab");
+        addBlock(ToripansBlocks.TORIPAN_STAIRS, "Toripan Stairs");
 
 
         add("creativetabs.toripan_tab", "Toripan");

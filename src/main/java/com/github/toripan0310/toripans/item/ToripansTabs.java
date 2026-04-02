@@ -28,6 +28,15 @@ public class ToripansTabs {
                         pOutput.accept(ToripansBlocks.TORIPAN_LEAVES.get());
                         pOutput.accept(ToripansBlocks.STRIPPED_TORIPAN_LOG.get());
                         pOutput.accept(ToripansBlocks.STRIPPED_TORIPAN_WOOD.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_PLANKS.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_BUTTON.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_FENCE.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_FENCE_GATE.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_BUTTON.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_DOOR.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_STAIRS.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_SLAB.get());
+                        pOutput.accept(ToripansBlocks.TORIPAN_PRESSURE_PLATE.get());
                         pOutput.accept(ToripansItems.TORIPAN_MEAT.get());
                         pOutput.accept(ToripansItems.COOKED_TORIPAN_MEAT.get());
                         pOutput.accept(ToripansItems.YAKITORI.get());

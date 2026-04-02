@@ -50,5 +50,16 @@ public class ToripansBlockTagsProvider extends BlockTagsProvider {
 
         this.tag(BlockTags.LEAVES)
                 .add(ToripansBlocks.TORIPAN_LEAVES.get());
+
+        this.tag(BlockTags.PLANKS).add(ToripansBlocks.TORIPAN_PLANKS.get());
+        this.tag(BlockTags.SLABS).add(ToripansBlocks.TORIPAN_SLAB.get());
+        this.tag(BlockTags.STAIRS).add(ToripansBlocks.TORIPAN_STAIRS.get());
+        this.tag(BlockTags.FENCES).add(ToripansBlocks.TORIPAN_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES).add(ToripansBlocks.TORIPAN_FENCE_GATE.get());
+        this.tag(BlockTags.DOORS).add(ToripansBlocks.TORIPAN_DOOR.get());
+        this.tag(BlockTags.TRAPDOORS).add(ToripansBlocks.TORIPAN_TRAPDOOR.get());
+        this.tag(BlockTags.BUTTONS).add(ToripansBlocks.TORIPAN_BUTTON.get());
+        this.tag(BlockTags.PRESSURE_PLATES).add(ToripansBlocks.TORIPAN_PRESSURE_PLATE.get());
+
     }
 }

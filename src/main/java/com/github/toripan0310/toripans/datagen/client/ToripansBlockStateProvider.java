@@ -5,8 +5,7 @@ import com.github.toripan0310.toripans.block.ToripansBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.models.model.TextureMapping;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -38,6 +37,31 @@ public class ToripansBlockStateProvider extends BlockStateProvider {
         item(ToripansBlocks.TORIPAN_WOOD);
         item(ToripansBlocks.STRIPPED_TORIPAN_WOOD);
         simpleLeaves(ToripansBlocks.TORIPAN_LEAVES);
+
+        simpleBlockWithItem(ToripansBlocks.TORIPAN_PLANKS);
+        slabBlock((SlabBlock) ToripansBlocks.TORIPAN_SLAB.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+        stairsBlock((StairBlock) ToripansBlocks.TORIPAN_STAIRS.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+        fenceBlock((FenceBlock) ToripansBlocks.TORIPAN_FENCE.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ToripansBlocks.TORIPAN_FENCE_GATE.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+        doorBlockWithRenderType((DoorBlock) ToripansBlocks.TORIPAN_DOOR.get(),
+                modLoc("block/toripan_door_bottom"),
+                modLoc("block/toripan_door_top"),
+                "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock)
+                        ToripansBlocks.TORIPAN_TRAPDOOR.get(),
+                modLoc("block/toripan_trapdoor"), true,
+                "cutout");
+        buttonBlock((ButtonBlock) ToripansBlocks.TORIPAN_BUTTON.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+        pressurePlateBlock((PressurePlateBlock) ToripansBlocks.TORIPAN_PRESSURE_PLATE.get(),
+                blockTexture(ToripansBlocks.TORIPAN_PLANKS.get()));
+
+
 
     }
 
